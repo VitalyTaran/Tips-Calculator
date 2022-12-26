@@ -10,12 +10,18 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var checkAmount = ""
+    @State private var numberOfPeople = 2
     
     var body: some View {
         NavigationView {
             Form {
                 Section {
                     TextField("Amount", text: $checkAmount)
+                    Picker("Number of people", selection: $numberOfPeople) {
+                        ForEach(2..<100) {
+                            Text("\($0) people")
+                        }
+                    }
                 }
             }
             .navigationTitle("Калькулятор чаевых")
