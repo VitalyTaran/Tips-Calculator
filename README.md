@@ -1,4 +1,4 @@
-# Tips-Calculator
+# TipsCalculator
 Training add Section
 
 Specification:
